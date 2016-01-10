@@ -1,0 +1,17 @@
+language: python
+python:
+- '2.7'
+- '3.3'
+install:
+- pip install .
+- pip install -r requirements.txt
+script: python app.py
+deploy:
+  provider: openshift
+  user: giovanni.panice@gmail.com
+  password:
+    secure: mwSftyFw3v/jL5qpWA9aiFVkj2N7/uilAqCKLUUP6I9ZrZBdFfjnFb7q8sBTOHlJrLD6ys71ST0I+BFP4QQg3tjyKLY2rPfu+mVlji9EiZ+/iqDqiVigTOWkl5icvCmJxVwUtY49SbcShWn8Cr5UZ+K2bchZxC9g1aE1IgXoQ5cRhoX0gExGU5BVoToucsnSGzPoW0vR7NNMmPWPw0ebL0lADxWgw8i9GULwKL1boszKOzgzmqCx+G+Rm2hN93DI7NHnYoc2blbPZRCvazIYa/k2q776gr7lacKx0Hi7e/fvKqhi4bTF1IrYUYGAzsLZBrsmTf9fXtE4dBP5VnhM8DW5iIPM55YEucUnmk6lTPnVgErS85UMxEmJceEwluEXpJzraq8HKcYNWtpwbvy9x7JwRuTpALA4MGt0Ckp+RbqbaRz4yGog7HBBXWHjhiq1iUSX+fnpG8bed12RZljNaRpwgyRVFQhlRHg0hdSpP5nnoV4dZEbVSl47djIBRMSzZC0DoSD0EhIqWmoDYwI/tX2MYZ3NNmGBbiJiwQQKu8a0Iv8bVumdCRRCpz265+Z4wsd4NMH0Y2TW64qMSIi/i0w5j/YGHNVUodFyR58FaLJES/5Cs7VKnq45nKJNxnX4pT7noGR2C74E1s/2tclnVzt1HjxblBHn5NB6uRB3vZ8=
+  app: cosbytbot
+  domain: uninacar
+  on:
+    repo: kmos/cosbytbot
