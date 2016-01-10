@@ -1,4 +1,4 @@
-# CosbyBot 
+# CosbyBot [![Build Status](https://travis-ci.org/kmos/cosbytbot.svg?branch=master)](https://travis-ci.org/kmos/cosbytbot) 
 *****
 
 CosbyBot is a simple bot for Telegram, based on the famous actor/comic Bill Cosby.
