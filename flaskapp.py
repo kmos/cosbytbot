@@ -12,8 +12,8 @@ import random
 app = Flask(__name__)
 app.config.from_pyfile('flaskapp.cfg')
 
-token = '116398301:AAExKC9Z86OgL94KnV2bklCnQEpX6Ic7_EY'
-page = 'http://telegrambot-uninacar.rhcloud.com/Updates'
+token = os.environ['TelegramBot']
+page = 'http://cosbytbot-uninacar.rhcloud.com/Updates'
 
 def vice():
  rss = 'http://www.vice.com/it/rss'
