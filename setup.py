@@ -5,6 +5,6 @@ setup(name='CosbyBot',
       description='A Funny Telegram Bot based on Bill Cosby',
       author='Mosfet',
       author_email='mosfet@paranoici.org',
-      url='http://telegrambot-uninacar.rhcloud.com',
+      url='cosbytbot-uninacar.rhcloud.com',
      install_requires=['Flask>=0.10.1'],
      )
