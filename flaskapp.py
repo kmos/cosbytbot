@@ -39,39 +39,39 @@ def index():
  return render_template('index.html')
 
 @app.route('/<path:resource>')
- def serveStaticResource(resource):
-  return send_from_directory('static/', resource)
+def serveStaticResource(resource):
+ return send_from_directory('static/', resource)
 
 @app.route("/start" , methods =['GET'])
- def start():
-  bot = TelegramBot(token)
-  bot.update_bot_info().wait()
-  print(bot.username)
-  #foto belle -33909375 
-  #user_id = int(23263342)
+def start():
+ bot = TelegramBot(token)
+ bot.update_bot_info().wait()
+ print(bot.username)
+ #foto belle -33909375 
+ #user_id = int(23263342)
 
-  #result = bot.send_message(user_id, 'Salve ragazzi').wait()
-  #XXX WebHook automatico non funzionante
-  result = bot.set_webhook(token)
-  print('*****Il risultato:' % (result))
+ #result = bot.send_message(user_id, 'Salve ragazzi').wait()
+ #XXX WebHook automatico non funzionante
+ result = bot.set_webhook(token)
+ print('*****Il risultato:' % (result))
  return "ok"
 
 @app.route("/Updates" , methods=['POST'])
- def update():
-  bot = TelegramBot(token)
-  bot.update_bot_info().wait()
+def update():
+ bot = TelegramBot(token)
+ bot.update_bot_info().wait()
 
-  if 'chat' in request.json['message']:
-   chat = request.json['message']['chat']['id']
-   if 'text' in request.json['message']:
-    text = request.json['message']['text']
-    if text.find('vice') != -1:
-     bot.send_message(chat, vice()).wait()
-    if text.find('drink') != -1:
-     bot.send_photo(chat,bill()).wait()
+ if 'chat' in request.json['message']:
+  chat = request.json['message']['chat']['id']
+  if 'text' in request.json['message']:
+   text = request.json['message']['text']
+   if text.find('vice') != -1:
+    bot.send_message(chat, vice()).wait()
+   if text.find('drink') != -1:
+    bot.send_photo(chat,bill()).wait()
 
-  #Print in console for fast Debugging
-  print(json.dumps(request.json))
+ #Print in console for fast Debugging
+ print(json.dumps(request.json))
  return "ok"
 
 if __name__ == '__main__':
