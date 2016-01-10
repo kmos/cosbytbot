@@ -21,7 +21,7 @@ def vice():
  entries = len(parsedRss['entries'])
  rndEntry = random.randint(1,entries)
  link = parsedRss.entries[rndEntry]['link']
-return link
+ return link
 
 def bill():
  rndnumber = random.randint(2,9)
@@ -32,7 +32,7 @@ def bill():
  file = open (file_path);
  file_info = InputFileInfo('2.jpg',file,'image/jpg')
  inp = InputFile('photo', file_info)
-return inp
+ return inp
 
 @app.route('/')
 def index():
