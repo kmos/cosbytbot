@@ -12,7 +12,7 @@ import random
 app = Flask(__name__)
 app.config.from_pyfile('flaskapp.cfg')
 
-token = '<insert token bot>'
+token = '116398301:AAExKC9Z86OgL94KnV2bklCnQEpX6Ic7_EY'
 page = 'http://telegrambot-uninacar.rhcloud.com/Updates'
 
 def vice():
