@@ -5,7 +5,7 @@ python:
 install:
 - pip install .
 - pip install -r requirements.txt
-script: python app.py
+script: python setup.py test
 deploy:
   provider: openshift
   user: giovanni.panice@gmail.com
