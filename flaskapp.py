@@ -36,7 +36,7 @@ return inp
 
 @app.route('/')
 def index():
-return render_template('index.html')
+ return render_template('index.html')
 
 @app.route('/<path:resource>')
  def serveStaticResource(resource):
